@@ -1,4 +1,4 @@
-linter-rubocop
+linter-json
 =========================
 
 This linter plugin for [Linter](https://github.com/AtomLinter/Linter) provides an interface to [jsonlint](https://github.com/zaach/jsonlint). It will be used with files that have the “JSON” syntax.
