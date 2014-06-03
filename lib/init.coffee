@@ -1,6 +1,6 @@
 module.exports =
   configDefaults:
-    jsonExecutablePath: null
+    jsonlintExecutablePath: null
 
   activate: ->
-    console.log 'activate linter-json'
+    console.log 'activate linter-jsonlint'

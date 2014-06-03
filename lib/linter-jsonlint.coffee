@@ -2,7 +2,7 @@ linterPath = atom.packages.getLoadedPackage("linter").path
 Linter = require "#{linterPath}/lib/linter"
 findFile = require "#{linterPath}/lib/util"
 
-class LinterJson extends Linter
+class LinterJsonlint extends Linter
   # The syntax that the linter handles. May be a string or
   # list/tuple of strings. Names should be all lowercase.
   @syntax: 'source.json'
@@ -13,7 +13,7 @@ class LinterJson extends Linter
 
   executablePath: null
 
-  linterName: 'json'
+  linterName: 'jsonlint'
 
   # A regex pattern used to extract information from the executable's output.
   regex:
@@ -22,10 +22,10 @@ class LinterJson extends Linter
   constructor: (editor)->
     super(editor)
 
-    atom.config.observe 'linter-json.jsonExecutablePath', =>
-      @executablePath = atom.config.get 'linter-json.jsonExecutablePath'
+    atom.config.observe 'linter-jsonlint.jsonlintExecutablePath', =>
+      @executablePath = atom.config.get 'linter-jsonlint.jsonlintExecutablePath'
 
   destroy: ->
-    atom.config.unobserve 'linter-json.jsonExecutablePath'
+    atom.config.unobserve 'linter-jsonlint.jsonlintExecutablePath'
 
-module.exports = LinterJson
+module.exports = LinterJsonlint
