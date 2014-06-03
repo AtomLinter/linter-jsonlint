@@ -3,7 +3,7 @@
   "linter-package": true,
   "activationEvents": [],
   "main": "./lib/init",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Lint JSON on the fly",
   "repository": "https://github.com/AtomLinter/linter-jsonlint",
   "license": "MIT",
