@@ -1,3 +1,4 @@
+{exec, child} = require('child_process')
 linterPath = atom.packages.getLoadedPackage("linter").path
 Linter = require "#{linterPath}/lib/linter"
 findFile = require "#{linterPath}/lib/util"
@@ -9,7 +10,7 @@ class LinterJsonlint extends Linter
 
   # A string, list, tuple or callable that returns a string, list or tuple,
   # containing the command line (with arguments) used to lint.
-  cmd: 'jsonlint -cq 2>&1'
+  cmd: 'jsonlint -cq'
 
   executablePath: null
 
@@ -27,5 +28,10 @@ class LinterJsonlint extends Linter
 
   destroy: ->
     atom.config.unobserve 'linter-jsonlint.jsonlintExecutablePath'
+    
+  lintFile: (filePath, callback) ->
+    command = @executablePath + '/' + @cmd + ' ' + filePath + ' ' + @options
+
+    exec(command, cwd: @cwd, (error, stdout, stderr) => if stderr then @processMessage(stderr, callback))
 
 module.exports = LinterJsonlint
