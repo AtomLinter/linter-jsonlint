@@ -9,11 +9,13 @@ class LinterJsonlint extends Linter
 
   # A string, list, tuple or callable that returns a string, list or tuple,
   # containing the command line (with arguments) used to lint.
-  cmd: 'jsonlint -cq 2>&1'
-
-  executablePath: null
+  cmd: 'jsonlint -cq'
 
   linterName: 'jsonlint'
+
+  isNodeExecutable: yes
+
+  errorStream: 'stderr'
 
   # A regex pattern used to extract information from the executable's output.
   regex:
