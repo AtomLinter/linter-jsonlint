@@ -16,17 +16,17 @@ Before using this plugin, you must ensure that `jsonlint` is installed on your s
    npm install jsonlint -g
    ```
 
-Now you can proceed to install the linter-json plugin.
+Now you can proceed to install the linter-jsonlint plugin.
 
 ### Plugin installation
 ```
-$ apm install linter-json
+$ apm install linter-jsonlint
 ```
 
 ## Settings
 You can configure linter-json by editing ~/.atom/config.cson (choose Open Your Config in Atom menu):
 ```
-'linter-json':
+'linter-jsonlint':
   'jsonExecutablePath': null #jsonlint path. run 'which jsonlint' to find the path
 ```
 
