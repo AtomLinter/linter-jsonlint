@@ -1,22 +1,10 @@
 linter-jsonlint
 =========================
 
-This linter plugin for [Linter](https://github.com/AtomLinter/Linter) provides an interface to [jsonlint](https://github.com/zaach/jsonlint). It will be used with files that have the “JSON” syntax.
+This [Linter](https://github.com/AtomLinter/Linter) plugin provides an interface to [jsonlint](https://github.com/zaach/jsonlint). It will be used with files that have the “JSON” syntax.
 
 ## Installation
 Linter package must be installed in order to use this plugin. If Linter is not installed, please follow the instructions [here](https://github.com/AtomLinter/Linter).
-
-### jsonlint installation
-Before using this plugin, you must ensure that `jsonlint` is installed on your system. To install `jsonlint`, do the following:
-
-1. Install [npm](http://howtonode.org/introduction-to-npm).
-
-2. Install [jsonlint](https://github.com/zaach/jsonlint) by typing the following in a terminal:
-   ```
-   npm install jsonlint -g
-   ```
-
-Now you can proceed to install the linter-jsonlint plugin.
 
 ### Plugin installation
 ```
