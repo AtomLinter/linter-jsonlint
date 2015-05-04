@@ -1,7 +1,7 @@
 {
   "name": "linter-jsonlint",
   "linter-package": true,
-  "activationEvents": [],
+  "activationCommands": [],
   "main": "./lib/init",
   "version": "0.1.2",
   "description": "Lint JSON on the fly",
