@@ -24,10 +24,11 @@ class LinterJsonlint extends Linter
   constructor: (editor)->
     super(editor)
 
-    atom.config.observe 'linter-jsonlint.jsonlintExecutablePath', =>
+    @configSubscription = atom.config.observe 'linter-jsonlint.jsonlintExecutablePath', =>
       @executablePath = atom.config.get 'linter-jsonlint.jsonlintExecutablePath'
 
   destroy: ->
-    atom.config.unobserve 'linter-jsonlint.jsonlintExecutablePath'
+    super
+    @configSubscription.dispose()
 
 module.exports = LinterJsonlint
