@@ -5,10 +5,6 @@ import jsonlint  from 'jsonlint';
 
 export default class LinterJsonLint {
 
-  static activate() {}
-
-  static deactivate() {}
-
   static regex = '.+?line\\s(\\d+)'
 
   static provideLinter() {
@@ -24,12 +20,15 @@ export default class LinterJsonLint {
         try {
           jsonlint.parse(text);
         } catch (e) {
-          let line = e.message.match(this.regex)[1];
+
+          let line = Number(e.message.match(this.regex)[1]);
+          let column = 0;
+
           return [{
             type: 'error',
             text: e.message,
             filePath: path,
-            range: new Range([Number(line), 0])
+            range: new Range([line, column], [line, column])
           }];
         }
 
