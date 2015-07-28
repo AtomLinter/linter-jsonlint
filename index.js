@@ -25,7 +25,7 @@ export default class LinterJsonLint {
           let column = 0;
 
           return [{
-            type: 'error',
+            type: 'Error',
             text: e.message,
             filePath: path,
             range: new Range([line, column], [line, column])
