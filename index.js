@@ -28,7 +28,7 @@ export default class LinterJsonLint {
             type: 'Error',
             text: e.message,
             filePath: path,
-            range: new Range([line, column], [line, column])
+            range: new Range([line, column], [line, column + 1])
           }];
         }
 
