@@ -7,6 +7,10 @@ export default class LinterJsonLint {
 
   static regex = '.+?line\\s(\\d+)'
 
+  static activate() {
+    require("atom-package-deps").install("linter-jsonlint");
+  }
+
   static provideLinter() {
     return {
       grammarScopes: ['source.json'],
