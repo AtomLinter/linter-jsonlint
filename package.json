@@ -9,7 +9,7 @@
     "atom": ">=1.0.0"
   },
   "dependencies": {
-    "atom-package-deps": "^2.0.1",
+    "atom-package-deps": "^2.0.2",
     "jsonlint": "~1.6.2"
   },
   "package-deps": [
