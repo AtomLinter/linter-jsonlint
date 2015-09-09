@@ -4,9 +4,7 @@ linter-jsonlint
 This [Linter](https://github.com/AtomLinter/Linter) plugin provides an interface to [jsonlint](https://github.com/zaach/jsonlint). It will be used with files that have the “JSON” syntax.
 
 ## Installation
-Linter package must be installed in order to use this plugin. If Linter is not installed, please follow the instructions [here](https://github.com/AtomLinter/Linter).
 
-### Plugin installation
 ```
 $ apm install linter-jsonlint
 ```
