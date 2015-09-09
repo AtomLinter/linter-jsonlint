@@ -1,7 +1,7 @@
 {
   "name": "linter-jsonlint",
   "main": "index.js",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Lint JSON on the fly",
   "repository": "https://github.com/AtomLinter/linter-jsonlint",
   "license": "MIT",
