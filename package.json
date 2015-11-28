@@ -9,8 +9,8 @@
     "atom": ">=1.0.0"
   },
   "dependencies": {
-    "atom-linter": "^3.2.1",
-    "atom-package-deps": "^2.0.5",
+    "atom-linter": "^3.3.9",
+    "atom-package-deps": "^3.0.5",
     "jsonlint": "~1.6.2"
   },
   "package-deps": [
