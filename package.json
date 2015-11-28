@@ -1,7 +1,7 @@
 {
   "name": "linter-jsonlint",
   "main": "index.js",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "A plugin for Atom Linter providing an interface to jsonlint",
   "repository": "https://github.com/AtomLinter/linter-jsonlint",
   "license": "MIT",
