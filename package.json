@@ -30,8 +30,8 @@
     "jsonlint": "~1.6.2"
   },
   "devDependencies": {
-    "babel-eslint": "^5.0.0-beta6",
-    "eslint": "^1.10.3",
+    "babel-eslint": "^5.0.0",
+    "eslint": "^2.2.0",
     "eslint-config-airbnb": "^6.0.0"
   },
   "eslintConfig": {
