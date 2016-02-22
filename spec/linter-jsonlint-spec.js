@@ -12,9 +12,10 @@ describe('The jsonlint provider for Linter', () => {
     atom.workspace.destroyActivePaneItem();
     waitsForPromise(() => {
       atom.packages.activatePackage('linter-jsonlint');
-      return atom.packages.activatePackage('language-json').then(() =>
-        atom.workspace.open(path.join(__dirname, 'fixtures', 'good.json'))
-      );
+      return atom
+        .packages
+        .activatePackage('language-json')
+        .then(() => atom.workspace.open(goodPath));
     });
   });
 
@@ -22,9 +23,12 @@ describe('The jsonlint provider for Linter', () => {
     let editor = null;
     beforeEach(() => {
       waitsForPromise(() =>
-        atom.workspace.open(badPath).then(openEditor => {
-          editor = openEditor;
-        })
+        atom
+          .workspace
+          .open(badPath)
+          .then(openEditor => {
+            editor = openEditor;
+          })
       );
     });
 
@@ -56,11 +60,14 @@ Expecting 'EOF', '}', ',', ']', got 'undefined'`);
 
   it('finds nothing wrong with a valid file', () => {
     waitsForPromise(() =>
-      atom.workspace.open(goodPath).then(editor =>
-        lint(editor).then(messages => {
-          expect(messages.length).toEqual(0);
-        })
-      )
+      atom
+        .workspace
+        .open(goodPath)
+        .then(editor =>
+          lint(editor).then(messages => {
+            expect(messages.length).toEqual(0);
+          })
+        )
     );
   });
 });
