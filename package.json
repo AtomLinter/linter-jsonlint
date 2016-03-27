@@ -1,6 +1,6 @@
 {
   "name": "linter-jsonlint",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "private": true,
   "description": "A plugin for Atom Linter providing an interface to jsonlint",
   "main": "lib/index.js",
