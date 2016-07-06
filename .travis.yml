@@ -1,19 +1,4 @@
-notifications:
-  email:
-    on_success: never
-    on_failure: change
-
-branches:
-  only:
-    - master
-
-script: 'curl -s https://raw.githubusercontent.com/atom/ci/master/build-package.sh | sh'
-
-git:
-  depth: 10
-
-sudo: false
-
+# Project specific config
 os:
   - linux
   - osx
@@ -25,6 +10,27 @@ env:
   matrix:
     - ATOM_CHANNEL=stable
     - ATOM_CHANNEL=beta
+
+# Installed for linting the project
+language: node_js
+node_js: "6"
+
+# Generic setup follows
+script: 'curl -s https://raw.githubusercontent.com/atom/ci/master/build-package.sh | sh'
+
+notifications:
+  email:
+    on_success: never
+    on_failure: change
+
+branches:
+  only:
+    - master
+
+git:
+  depth: 10
+
+sudo: false
 
 addons:
   apt:
