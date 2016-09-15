@@ -22,7 +22,7 @@ describe('The jsonlint provider for Linter', () => {
     let editor = null;
     beforeEach(() => {
       waitsForPromise(() =>
-        atom.workspace.open(badPath).then(openEditor => {
+        atom.workspace.open(badPath).then((openEditor) => {
           editor = openEditor;
         })
       );
@@ -30,15 +30,13 @@ describe('The jsonlint provider for Linter', () => {
 
     it('finds at least one message', () => {
       waitsForPromise(() =>
-        lint(editor).then(messages => {
-          expect(messages.length).toBeGreaterThan(0);
-        })
+        lint(editor).then(messages => expect(messages.length).toBeGreaterThan(0))
       );
     });
 
     it('verifies the first message', () => {
       waitsForPromise(() =>
-        lint(editor).then(messages => {
+        lint(editor).then((messages) => {
           expect(messages[0].type).toEqual('Error');
           expect(messages[0].text).toEqual(`Parse error on line 2:
 {  "key": 1 + 2}
@@ -57,9 +55,7 @@ Expecting 'EOF', '}', ',', ']', got 'undefined'`);
   it('finds nothing wrong with a valid file', () => {
     waitsForPromise(() =>
       atom.workspace.open(goodPath).then(editor =>
-        lint(editor).then(messages => {
-          expect(messages.length).toEqual(0);
-        })
+        lint(editor).then(messages => expect(messages.length).toEqual(0))
       )
     );
   });
