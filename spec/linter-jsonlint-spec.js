@@ -6,7 +6,7 @@ const goodPath = path.join(__dirname, 'fixtures', 'good.json');
 const badPath = path.join(__dirname, 'fixtures', 'bad.json');
 
 describe('The jsonlint provider for Linter', () => {
-  const lint = require(path.join('..', 'lib', 'index.js')).provideLinter().lint;
+  const lint = require('../lib/index.js').provideLinter().lint;
 
   beforeEach(() => {
     atom.workspace.destroyActivePaneItem();

@@ -48,15 +48,13 @@
             "atom"
           ]
         }
-      ],
-      "import/no-extraneous-dependencies": "off"
+      ]
     },
     "extends": "airbnb-base",
     "globals": {
       "atom": true
     },
     "env": {
-      "es6": true,
       "node": true
     }
   },
