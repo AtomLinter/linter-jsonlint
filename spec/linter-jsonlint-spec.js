@@ -6,7 +6,7 @@ const goodPath = path.join(__dirname, 'fixtures', 'good.json');
 const badPath = path.join(__dirname, 'fixtures', 'bad.json');
 
 describe('The jsonlint provider for Linter', () => {
-  const lint = require('../lib/index.js').provideLinter().lint;
+  const { lint } = require('../lib/index.js').provideLinter();
 
   beforeEach(() => {
     atom.workspace.destroyActivePaneItem();
@@ -14,8 +14,7 @@ describe('The jsonlint provider for Linter', () => {
       Promise.all([
         atom.packages.activatePackage('linter-jsonlint'),
         atom.packages.activatePackage('language-json')
-      ])
-    );
+      ]));
   });
 
   describe('checks bad.md and', () => {
@@ -24,14 +23,12 @@ describe('The jsonlint provider for Linter', () => {
       waitsForPromise(() =>
         atom.workspace.open(badPath).then((openEditor) => {
           editor = openEditor;
-        })
-      );
+        }));
     });
 
     it('finds at least one message', () => {
       waitsForPromise(() =>
-        lint(editor).then(messages => expect(messages.length).toBeGreaterThan(0))
-      );
+        lint(editor).then(messages => expect(messages.length).toBeGreaterThan(0)));
     });
 
     it('verifies the first message', () => {
@@ -47,16 +44,13 @@ Expecting 'EOF', '}', ',', ']', got 'undefined'`);
             start: { row: 2, column: 0 },
             end: { row: 2, column: 1 }
           });
-        })
-      );
+        }));
     });
   });
 
   it('finds nothing wrong with a valid file', () => {
     waitsForPromise(() =>
       atom.workspace.open(goodPath).then(editor =>
-        lint(editor).then(messages => expect(messages.length).toEqual(0))
-      )
-    );
+        lint(editor).then(messages => expect(messages.length).toEqual(0))));
   });
 });
