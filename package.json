@@ -26,7 +26,7 @@
   },
   "homepage": "https://github.com/AtomLinter/linter-jsonlint#readme",
   "dependencies": {
-    "atom-package-deps": "^4.0.1",
+    "atom-package-deps": "^5.0.0",
     "jsonlint": "~1.6.2"
   },
   "devDependencies": {
