@@ -61,6 +61,11 @@
   "package-deps": [
     "linter:2.0.0"
   ],
+  "renovate": {
+    "extends": [
+      "config:base"
+    ]
+  },
   "providedServices": {
     "linter": {
       "versions": {
