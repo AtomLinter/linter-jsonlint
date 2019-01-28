@@ -26,13 +26,13 @@
   },
   "homepage": "https://github.com/AtomLinter/linter-jsonlint#readme",
   "dependencies": {
-    "atom-package-deps": "^5.0.0",
-    "jsonlint": "~1.6.2"
+    "atom-package-deps": "5.0.0",
+    "jsonlint": "1.6.3"
   },
   "devDependencies": {
-    "eslint": "^4.6.0",
-    "eslint-config-airbnb-base": "^12.0.0",
-    "eslint-plugin-import": "^2.7.0"
+    "eslint": "4.19.1",
+    "eslint-config-airbnb-base": "12.1.0",
+    "eslint-plugin-import": "2.15.0"
   },
   "eslintConfig": {
     "rules": {
