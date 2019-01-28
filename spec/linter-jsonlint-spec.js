@@ -34,13 +34,13 @@ describe('The jsonlint provider for Linter', () => {
     it('verifies the first message', () => {
       waitsForPromise(() =>
         lint(editor).then((messages) => {
-          expect(messages[0].type).toEqual('Error');
-          expect(messages[0].text).toEqual(`Parse error on line 2:
+          expect(messages[0].severity).toEqual('error');
+          expect(messages[0].excerpt).toEqual(`Parse error on line 2:
 {  "key": 1 + 2}
 ------------^
 Expecting 'EOF', '}', ',', ']', got 'undefined'`);
-          expect(messages[0].filePath).toMatch(/.+bad\.json$/);
-          expect(messages[0].range).toEqual({
+          expect(messages[0].location.file).toMatch(/.+bad\.json$/);
+          expect(messages[0].location.position).toEqual({
             start: { row: 2, column: 0 },
             end: { row: 2, column: 1 }
           });
