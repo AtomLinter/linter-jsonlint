@@ -30,7 +30,7 @@
     "jsonlint": "1.6.3"
   },
   "devDependencies": {
-    "eslint": "6.0.1",
+    "eslint": "6.3.0",
     "eslint-config-airbnb-base": "13.2.0",
     "eslint-plugin-import": "2.18.0"
   },
